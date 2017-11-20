@@ -1,8 +1,9 @@
 class SongsController < ApplicationController
-  def index
-  end
+  # def index
+  # end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def new
@@ -16,5 +17,5 @@ class SongsController < ApplicationController
 
   def update
   end
-  
+
 end
