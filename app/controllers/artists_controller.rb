@@ -11,12 +11,18 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    redirect_to :artist_path(@artist)
   end
 
   def edit
   end
 
   def update
+  end
+
+  private
+  def artist_params(*args)
+    params.require(:artist).permit(*args)
   end
 
 end
