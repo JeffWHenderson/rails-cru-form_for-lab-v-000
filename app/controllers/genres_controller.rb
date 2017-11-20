@@ -11,6 +11,8 @@ class GenresController < ApplicationController
   end
 
   def create
+    @genre = Genre.create(genre_params(:name))
+    
   end
 
   def edit
