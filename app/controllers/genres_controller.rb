@@ -7,6 +7,7 @@ class GenresController < ApplicationController
   end
   
   def new
+    
   end
   
   def create
@@ -16,6 +17,12 @@ class GenresController < ApplicationController
   end
   
   def update
+  end
+
+  private
+
+  def gerne_params(*args)
+    params.require(:genre).permit(*args)
   end
   
 end
